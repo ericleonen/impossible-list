@@ -22,7 +22,7 @@ const Landing = ({ isAuth }) => {
                 <p className="font-semibold text-7xl">Do the <span className="text-blue-500">impossible</span></p>
                 <div className="flex items-center p-10 bg-white rounded-lg shadow-lg w-[80%] mt-20">
                     <div className="p-2 bg-gray-200 rounded-lg shadow-md">
-                        <img src={doingImg} className="h-[30rem]"/>
+                        <img src={doingImg} className="h-[30rem]" alt="app main page"/>
                     </div>
                     <div className="max-w-[25rem] pl-8 ml-4">
                         <p className="text-4xl font-semibold">Write goals down. <br /> Get them done.</p>
@@ -35,7 +35,7 @@ const Landing = ({ isAuth }) => {
                         <p className="mt-5 text-xl text-gray-500">Anyone can find your profile through the search bar to watch you complete your life's goals. Follow your friends to get inspired and copy goals. <br/><br/>Impossible goals are a lot less impossible with the support of your friends.</p>
                     </div>
                     <div className="p-2 bg-gray-200 rounded-lg shadow-md">
-                        <img src={sharingImg} className="h-[30rem]"/>
+                        <img src={sharingImg} className="h-[30rem]" alt="app social page"/>
                     </div>
                 </div>
             </div>
