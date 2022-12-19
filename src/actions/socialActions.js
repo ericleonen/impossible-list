@@ -11,7 +11,7 @@ export const searchUsers = (query, userId) => dispatch => {
     }
     else {
         axios
-            .get(`http://localhost:5000/api/users/search?query=${query}&userId=${userId}`)
+            .get(`https://impossible-list.onrender.com/api/users/search?query=${query}&userId=${userId}`)
             .then(res => {
                 dispatch({
                     type: GET_SEARCH_USERS,
@@ -32,7 +32,7 @@ export const setViewUser = (id) => dispatch => {
     }
     else {
         axios
-            .get(`http://localhost:5000/api/users/${id}`)
+            .get(`https://impossible-list.onrender.com/api/users/${id}`)
             .then(res => {
                 dispatch({
                     type: SET_VIEW_USER,
@@ -45,7 +45,7 @@ export const setViewUser = (id) => dispatch => {
 
 export const followUser = (userId, id) => dispatch => {
     axios
-        .put("http://localhost:5000/api/users/follow", {
+        .put("https://impossible-list.onrender.com/api/users/follow", {
             userId,
             id
         })
@@ -55,7 +55,7 @@ export const followUser = (userId, id) => dispatch => {
 
 export const unfollowUser = (userId, id) => dispatch => {
     axios
-        .put("http://localhost:5000/api/users/unfollow", {
+        .put("https://impossible-list.onrender.com/api/users/unfollow", {
             userId,
             id
         })
@@ -65,7 +65,7 @@ export const unfollowUser = (userId, id) => dispatch => {
 
 export const setFollowing = id => dispatch => {
     axios
-        .get(`http://localhost:5000/api/users/following/${id}`)
+        .get(`https://impossible-list.onrender.com/api/users/following/${id}`)
         .then(({data}) => {
             dispatch({
                 type: SET_FOLLOWING,

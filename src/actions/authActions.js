@@ -13,7 +13,7 @@ import { setViewUser } from "./socialActions";
 // register user
 export const registerUser = (userData, navigate) => dispatch => {
     axios
-        .post("http://localhost:5000/api/users/register", userData)
+        .post("https://impossible-list.onrender.com/api/users/register", userData)
         .then(res => navigate("/login"))
         .then(() => {
             clearAuthErrors()(dispatch);
@@ -29,7 +29,7 @@ export const registerUser = (userData, navigate) => dispatch => {
 // login: get user token
 export const loginUser = userData => dispatch => {
     axios
-        .post("http://localhost:5000/api/users/login", userData)
+        .post("https://impossible-list.onrender.com/api/users/login", userData)
         .then(res => {
             // save to local storage
 

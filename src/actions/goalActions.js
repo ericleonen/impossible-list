@@ -4,7 +4,7 @@ import { GET_GOAL_ERRORS, SET_GOALS } from "../actions/types";
 // create a new goal
 export const createGoal = (userId, title, onClose) => dispatch => {
     axios
-        .post("http://localhost:5000/api/goals/create", {
+        .post("https://impossible-list.onrender.com/api/goals/create", {
             userId,
             title
         })
@@ -22,7 +22,7 @@ export const createGoal = (userId, title, onClose) => dispatch => {
 
 export const getGoals = (userId) => dispatch => {
     axios
-        .get(`http://localhost:5000/api/goals/all/${userId}`)
+        .get(`https://impossible-list.onrender.com/api/goals/all/${userId}`)
         .then(({data}) => {
             dispatch({
                 type: SET_GOALS,
@@ -34,7 +34,7 @@ export const getGoals = (userId) => dispatch => {
 
 export const updateGoal = (userId, index, title, onClose) => dispatch => {
     axios
-        .put("http://localhost:5000/api/goals/update", {
+        .put("https://impossible-list.onrender.com/api/goals/update", {
             userId, 
             index, 
             title
@@ -53,7 +53,7 @@ export const updateGoal = (userId, index, title, onClose) => dispatch => {
 
 export const updateGoalCompleted = (userId, index, completed) => dispatch => {
     axios
-        .put("http://localhost:5000/api/goals/updateCompleted", {
+        .put("https://impossible-list.onrender.com/api/goals/updateCompleted", {
             userId,
             index,
             completed
@@ -66,7 +66,7 @@ export const updateGoalCompleted = (userId, index, completed) => dispatch => {
 
 export const deleteGoal = (userId, index) => dispatch => {
     axios
-        .put("http://localhost:5000/api/goals/delete", {
+        .put("https://impossible-list.onrender.com/api/goals/delete", {
             userId,
             index
         })
