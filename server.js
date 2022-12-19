@@ -10,7 +10,7 @@ const goals = require("./routes/api/goals");
 const app = express();
 
 app.use(cors({
-    origin: "*"
+    origin: "https://impossible-list.onrender.com"
 }));
 
 // body-parser middleware
