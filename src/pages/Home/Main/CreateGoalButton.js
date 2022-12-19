@@ -1,4 +1,3 @@
-import isEmpty from "is-empty";
 import { connect } from "react-redux";
 import { setCreateGoal } from "../../../actions/modalActions";
 

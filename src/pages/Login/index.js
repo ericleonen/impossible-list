@@ -27,13 +27,13 @@ const Login = ({ auth, errors, loginUser, clearAuthErrors }) => {
         if (auth.isAuth) {
             navigate("/home");
         }
-    });
+    }, [auth, navigate]);
     
     const location = useLocation();
 
     useEffect(() => {
         clearAuthErrors();
-    }, [location]);
+    }, [location, clearAuthErrors]);
 
     return (
         <FullPage verticalCenter horizontalCenter>

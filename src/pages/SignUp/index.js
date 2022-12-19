@@ -32,13 +32,13 @@ const SignUp = ({ errors, auth, registerUser, clearAuthErrors }) => {
         if (auth.isAuth) {
             navigate("/home");
         }
-    });
+    }, [auth, navigate]);
 
     const location = useLocation();
 
     useEffect(() => {
         clearAuthErrors();
-    }, [location]);
+    }, [location, clearAuthErrors]);
 
     return (
         <FullPage verticalCenter horizontalCenter>

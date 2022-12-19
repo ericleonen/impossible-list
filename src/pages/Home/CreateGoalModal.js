@@ -8,7 +8,6 @@ import { setCreateGoal } from "../../actions/modalActions";
 import { useState } from "react";
 import { createGoal } from "../../actions/goalActions";
 import { clearGoalErrors } from "../../actions/errorActions";
-import isEmpty from "is-empty";
 
 const CreateGoalModal = ({ active, userId, setCreateGoal, createGoal, clearGoalErrors, errors }) => {
     const [title, setTitle] = useState("");
